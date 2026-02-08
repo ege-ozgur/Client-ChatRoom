@@ -302,8 +302,8 @@ int main(int, char**) {
             ImGui::SetNextWindowPos(ImVec2(io.DisplaySize.x * 0.35f, io.DisplaySize.y * 0.5f), ImGuiCond_Always, ImVec2(0.5f, 0.5f));
             ImGui::SetNextWindowSize(ImVec2(800, 600), ImGuiCond_Always); //we set the window size to be 800x600 and position it
 
-            // we create the main chat window with no resizing, no moving, and no collapsing to keep it simple and focused on the chat functionality
-            ImGuiWindowFlags window_flags = ImGuiWindowFlags_NoResize | ImGuiWindowFlags_NoMove | ImGuiWindowFlags_NoCollapse;
+            // we create the main chat window with no resizing, no moving, and no collapsing to keep it simple
+            ImGuiWindowFlags window_flags = ImGuiWindowFlags_NoResize | ImGuiWindowFlags_NoMove | ImGuiWindowFlags_NoCollapse | ImGuiWindowFlags_NoBringToFrontOnFocus;;
             ImGui::Begin("Chat Client - Main Chat Room", nullptr, window_flags);
 
             // we use ImGui columns to create a two-column layout for the user list and global chat, setting a fixed width for the user list column
